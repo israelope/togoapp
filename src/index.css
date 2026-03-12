@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  /* Defining your custom brand colors */
+  --color-brand-dark: #2D2921;
+  --color-brand-gold: #A6885B;
+  
+  /* You can also map them to semantic names */
+  --color-hospitality-bg: var(--color-brand-dark);
+  --color-hospitality-accent: var(--color-brand-gold);
+}
+
+/* Base styles using your new variables */
+@layer base {
+  body {
+    @apply bg-brand-dark text-white antialiased;
+  }
+}
