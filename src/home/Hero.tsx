@@ -3,7 +3,7 @@ import logo from "/logo.png";
 
 const App = () => {
   return (
-    <main className=" relative h-fit w-fit bg-white brightness-100 ">
+    <main className=" relative h-fit w-screen bg-white brightness-100 ">
       <video
         autoPlay
         muted
