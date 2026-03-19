@@ -1,6 +1,12 @@
 import React from 'react';
 
-const ProblemCard = ({ problem, solution, imageSrc }) => {
+interface ProblemCardProps {
+  problem: string;
+  solution: string;
+  imageSrc: string;
+}
+
+const ProblemCard = ({ problem, solution, imageSrc }: ProblemCardProps) => {
   return (
     <div className="group relative h-[500px] w-full rounded-3xl overflow-hidden cursor-pointer shadow-lg">
       {/* Background Image */}
