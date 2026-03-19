@@ -1,7 +1,6 @@
-import React from "react";
+
 import { motion } from "framer-motion";
 import ServiceCard from "./ServiceCard";
-import { img } from "framer-motion/client";
 
 const WhatWeDo = () => {
   const services = [

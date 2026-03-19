@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { ArrowRight, ChevronDown, Menu } from "lucide-react";
 import MobileMenu from "./MobileMenu";
 

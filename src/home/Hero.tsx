@@ -1,5 +1,4 @@
 import FadeIn from "./FadeIn";
-import logo from "/logo.png"; // Replace with your actual customer logos
 
 const App = () => {
   return (
