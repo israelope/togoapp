@@ -61,7 +61,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       {/* Header */}
       <div className="flex items-center justify-between px-6 py-6 border-b border-gray-50">
         <a href="/" onClick={handleClose} className="flex items-center gap-3">
-          <img src="/logo.png" alt="Logo" className="w-10 h-10" />
+          <img src="/logo2.webp" alt="Logo" className="w-10 h-10" />
           <span className="font-bold text-xl text-black uppercase tracking-tight">Togo</span>
         </a>
         <button onClick={handleClose} className="p-2 text-black">
@@ -84,13 +84,13 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 {item.type === "trigger" ? (
                   <button
                     onClick={() => setActiveMenu(item.id!)}
-                    className="flex items-center justify-between w-full text-2xl font-bold text-black group"
+                    className="flex items-center justify-between w-full text-2xl font-semibold text-black group"
                   >
                     <span>{item.name}</span>
                     <ChevronRight className="text-brand-gold group-active:translate-x-2 transition-transform" />
                   </button>
                 ) : (
-                  <a href={item.href} onClick={handleClose} className="text-2xl font-bold text-black block">
+                  <a href={item.href} onClick={handleClose} className="text-2xl font-semibold text-black block">
                     {item.name}
                   </a>
                 )}
@@ -102,7 +102,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           <div className="flex flex-col space-y-8 animate-in fade-in slide-in-from-right-5 duration-300">
             <button
               onClick={() => setActiveMenu("main")}
-              className="flex items-center gap-2 text-sm font-black tracking-widest text-brand-gold uppercase mb-4"
+              className="flex items-center gap-2 text-sm font-semibold tracking-widest text-brand-gold uppercase mb-4"
             >
               <ChevronRight className="rotate-180 w-4 h-4" /> Back to Menu
             </button>
@@ -116,7 +116,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 key={idx} 
                 href={sub.href} 
                 onClick={handleClose}
-                className="text-2xl font-bold text-black hover:text-brand-gold transition-colors"
+                className="text-2xl font-semibold text-black hover:text-brand-gold transition-colors"
               >
                 {sub.name}
               </a>
