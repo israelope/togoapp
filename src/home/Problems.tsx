@@ -46,7 +46,7 @@ const Problems = () => {
       <FadeIn>
         <div className="mx-auto text-center p-8 border-2 border-black w-full sm:w-fit mt-15 rounded-2xl shadow-sm bg-white/50 backdrop-blur-sm">
           <h1 className="text-black text-3xl md:text-4xl font-bold leading-tight italic text-center pb-5 ">See it to believe it!</h1>
-          <button className="bg-brand-gold hover:bg-white text-white px-10 py-3 rounded-full hover:text-white font-semibold border-black border-2">
+          <button className="bg-brand-gold hover:bg-white text-white px-10 py-3 rounded-full hover:text-black font-semibold border-black border-2">
             Schedule A Demo
           </button>
         </div>
