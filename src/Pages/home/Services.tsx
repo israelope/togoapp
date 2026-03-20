@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import ServiceCard from "../components/ServiceCard";
+import ServiceCard from "../../components/ServiceCard";
 
 const WhatWeDo = () => {
   const services = [

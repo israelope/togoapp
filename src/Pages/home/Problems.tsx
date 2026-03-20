@@ -1,5 +1,5 @@
-import FadeIn from "../components/FadeIn";
-import ProblemCard from "../components/ProblemCard";
+import FadeIn from "../../components/FadeIn";
+import ProblemCard from "../../components/ProblemCard";
 
 const Problems = () => {
   return (
