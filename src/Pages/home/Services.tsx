@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ServiceCard from "../../components/ServiceCard";
 
@@ -78,9 +78,9 @@ const WhatWeDo = () => {
           >
             <h3 className="text-white text-3xl md:text-5xl font-bold italic mb-4">Need Something Bespoke?</h3>
             <p className="text-brand-gold text-lg md:text-xl max-w-lg mb-8">Get in touch with our friendly team to talk through your needs.</p>
-            <a href="/contact"><button className="bg-white text-brand-dark px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-brand-gold hover:text-white transition-all shadow-lg active:scale-95">
+            <Link to="/contact"><button className="bg-white text-brand-dark px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-brand-gold hover:text-white transition-all shadow-lg active:scale-95">
               Get In Touch
-            </button></a>
+            </button></Link>
           </motion.div>
         </div>
       </div>

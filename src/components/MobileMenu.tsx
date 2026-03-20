@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { X, ChevronRight, ArrowRight } from "lucide-react";
 
@@ -17,40 +18,40 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   // The exact same structure as your Desktop Nav
   const menuItems = [
     { name: "Home", href: "/" },
-    { 
-      name: "Table Booking System", 
-      type: "trigger", 
+    {
+      name: "Table Booking System",
+      type: "trigger",
       id: "table",
       subLinks: [
         { name: "Togo Booking System", href: "#" },
         { name: "Togo Marketing Platform", href: "#" },
         { name: "Booking System Demo", href: "#" },
-      ]
+      ],
     },
     { name: "Activity Booking System", href: "/activity" },
     { name: "Websites", href: "/websites" },
-    { 
-      name: "Other Services", 
-      type: "trigger", 
+    {
+      name: "Other Services",
+      type: "trigger",
       id: "services",
       subLinks: [
         { name: "Branding", href: "#" },
         { name: "Photography", href: "#" },
-      ]
+      ],
     },
-    { 
-      name: "Spacebook", 
-      type: "trigger", 
+    {
+      name: "Spacebook",
+      type: "trigger",
       id: "spacebook",
       subLinks: [
         { name: "Spacebook", href: "#" },
         { name: "Spacebook Beauty", href: "#" },
-      ]
+      ],
     },
     { name: "Contact", href: "/contact" },
   ];
 
-  const currentSubMenu = menuItems.find(item => item.id === activeMenu);
+  const currentSubMenu = menuItems.find((item) => item.id === activeMenu);
 
   return (
     <div
@@ -62,7 +63,9 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       <div className="flex items-center justify-between px-6 py-6 border-b border-gray-50">
         <a href="/" onClick={handleClose} className="flex items-center gap-3">
           <img src="/logo2.webp" alt="Logo" className="w-10 h-10" />
-          <span className="font-bold text-xl text-black uppercase tracking-tight">Togo</span>
+          <span className="font-bold text-xl text-black uppercase tracking-tight">
+            Togo
+          </span>
         </a>
         <button onClick={handleClose} className="p-2 text-black">
           <X size={32} strokeWidth={1.5} />
@@ -77,7 +80,9 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               <div
                 key={item.name}
                 className={`transition-all duration-500 transform ${
-                  isOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+                  isOpen
+                    ? "opacity-100 translate-x-0"
+                    : "opacity-0 -translate-x-10"
                 }`}
                 style={{ transitionDelay: `${index * 60}ms` }}
               >
@@ -90,7 +95,11 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     <ChevronRight className="text-brand-gold group-active:translate-x-2 transition-transform" />
                   </button>
                 ) : (
-                  <a href={item.href} onClick={handleClose} className="text-2xl font-semibold text-black block">
+                  <a
+                    href={item.href}
+                    onClick={handleClose}
+                    className="text-2xl font-semibold text-black block"
+                  >
                     {item.name}
                   </a>
                 )}
@@ -106,15 +115,15 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             >
               <ChevronRight className="rotate-180 w-4 h-4" /> Back to Menu
             </button>
-            
+
             <h2 className="text-xs uppercase tracking-widest text-gray-400 font-bold mb-2">
               {currentSubMenu?.name}
             </h2>
 
             {currentSubMenu?.subLinks?.map((sub, idx) => (
-              <a 
-                key={idx} 
-                href={sub.href} 
+              <a
+                key={idx}
+                href={sub.href}
                 onClick={handleClose}
                 className="text-2xl font-semibold text-black hover:text-brand-gold transition-colors"
               >
@@ -126,14 +135,17 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       </div>
 
       {/* CTA Footer */}
-      <div 
+      <div
         className={`p-6 pb-12 mt-auto transition-all duration-700 delay-500 ${
           isOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        <button className="flex items-center justify-center w-full gap-3 px-6 py-5 bg-brand-gold text-white font-bold text-lg rounded-full shadow-lg">
-          Get Togo <ArrowRight size={20} />
-        </button>
+        {/* Add onClick={onClose} to the Link so it shuts the menu immediately */}
+        <Link to="/contact" onClick={onClose}>
+          <button className="flex items-center justify-center w-full gap-3 px-6 py-5 bg-brand-gold text-white font-bold text-lg rounded-full shadow-lg active:scale-95 transition-transform">
+            Get Togo <ArrowRight size={20} />
+          </button>
+        </Link>
       </div>
     </div>
   );
