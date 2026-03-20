@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Calendar, Clock, Building, User, Phone, Mail, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 const Booking = () => {
