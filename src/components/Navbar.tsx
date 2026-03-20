@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import  { useState, useEffect } from "react";
 import { ArrowRight, ChevronDown, Menu } from "lucide-react";
 import MobileMenu from "./MobileMenu";
@@ -44,7 +45,7 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-5 font-medium text-black ">
-            <a href="/about" className="hover:opacity-60 transition-opacity">
+            <a href="/" className="hover:opacity-60 transition-opacity">
               Home
             </a>
 
@@ -127,9 +128,9 @@ export default function Navbar() {
               </div>
             </div>
 
-            <a href="/demo" className="hover:opacity-60 transition-opacity">
+            <Link to="/contact" className="hover:opacity-60 transition-opacity">
               Contact
-            </a>
+            </Link>
           </nav>
 
           {/* Action Button */}
