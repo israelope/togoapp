@@ -1,6 +1,7 @@
 
 import Hero from "./Hero"
 import Problems from "./Problems"
+import FloatingReviews from "./Reviews"
 import Services from "./Services"
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
     <Hero/>
     <Problems/>
     <Services/>
+    <FloatingReviews/>
   
     </>
   )
