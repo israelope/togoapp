@@ -20,7 +20,7 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 z-50 w-full transition-all duration-500 px-6 md:px-10 ${
-          /* Always visible, but background morphs on scroll */
+
           isScrolled
             ? "bg-white/90 backdrop-blur-md shadow-md py-3"
             : "bg-brand-gold py-6"
@@ -53,7 +53,7 @@ export default function Navbar() {
                 Table booking system{" "}
                 <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
               </button>
-              {/* Dropdown with the "Proactive" Lift Transition */}
+
               <div className="absolute top-full left-0 w-52 bg-white shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-3 group-hover:translate-y-0 transition-all duration-300 rounded-2xl border border-gray-100 overflow-hidden">
                 <a
                   href="#"
@@ -87,6 +87,7 @@ export default function Navbar() {
                 Other Services{" "}
                 <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
               </button>
+              
               {/* Dropdown with the "Proactive" Lift Transition */}
               <div className="absolute top-full left-0 w-52 bg-white shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-3 group-hover:translate-y-0 transition-all duration-300 rounded-2xl border border-gray-100 overflow-hidden">
                 <a

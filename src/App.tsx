@@ -1,16 +1,9 @@
-
-import Hero from "./home/Hero"
-import Navbar from './home/Navbar'
-import Problems from './home/Problems'
-import Services from './home/Services'
+import Home from "./home/Home"
 
 const App = () => {
   return (
     <>
-    <Navbar/>
-    <Hero/>
-    <Problems/>
-    <Services/>
+    <Home/>
     </>
   )
 }
