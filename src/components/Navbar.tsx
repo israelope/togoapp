@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { ArrowRight, ChevronDown, Menu } from "lucide-react";
 import MobileMenu from "./MobileMenu";
 
@@ -21,7 +21,6 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 z-50 w-full transition-all duration-500 px-6 md:px-10 ${
-
           isScrolled
             ? "bg-white/90 backdrop-blur-md shadow-md py-3"
             : "bg-brand-gold py-6"
@@ -44,14 +43,14 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-5 font-medium text-black ">
+          <nav className="hidden lg:flex items-center gap-8 font-medium text-[1.2em] text-black ">
             <a href="/" className="hover:opacity-60 transition-opacity">
               Home
             </a>
 
             <div className="relative group py-4">
               <button className="flex items-center gap-1 cursor-pointer">
-                Table booking system{" "}
+                Booking System{" "}
                 <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
               </button>
 
@@ -61,6 +60,12 @@ export default function Navbar() {
                   className="block px-6 py-4 hover:bg-brand-gold hover:text-white text-sm transition-colors"
                 >
                   Togo Booking System
+                </a>
+                <a
+                  href="#"
+                  className="block px-6 py-4 hover:bg-brand-gold hover:text-white text-sm transition-colors"
+                >
+                  Table booking system
                 </a>
                 <a
                   href="#"
@@ -76,21 +81,21 @@ export default function Navbar() {
                 </a>
               </div>
             </div>
-            <a href="/about" className="hover:opacity-60 transition-opacity">
-              Activity Booking System{" "}
-            </a>
-            <a href="/about" className="hover:opacity-60 transition-opacity">
-              Websites{" "}
-            </a>
 
             <div className="relative group py-4">
               <button className="flex items-center gap-1 cursor-pointer">
-                Other Services{" "}
+                Services{" "}
                 <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
               </button>
-              
+
               {/* Dropdown with the "Proactive" Lift Transition */}
               <div className="absolute top-full left-0 w-52 bg-white shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-3 group-hover:translate-y-0 transition-all duration-300 rounded-2xl border border-gray-100 overflow-hidden">
+                <a
+                  href="#"
+                  className="block px-6 py-4 hover:bg-brand-gold hover:text-white text-sm transition-colors"
+                >
+                  Websites
+                </a>
                 <a
                   href="#"
                   className="block px-6 py-4 hover:bg-brand-gold hover:text-white text-sm transition-colors"
@@ -135,15 +140,17 @@ export default function Navbar() {
 
           {/* Action Button */}
           <div className="flex items-center gap-4">
-            <button
-              className={`hidden md:flex items-center border-2 border-black gap-2 px-8 py-3 rounded-full font-bold transition-all duration-300 ${
-                isScrolled
-                  ? "bg-brand-gold text-white hover:bg-black"
-                  : "bg-white text-black hover:bg-black hover:text-white"
-              }`}
-            >
-              Get Togo <ArrowRight size={20} />
-            </button>
+            <Link to="/book-a-demo">
+              <button
+                className={`hidden md:flex items-center border-2 border-black gap-2 px-8 py-3 rounded-full font-bold transition-all duration-300 ${
+                  isScrolled
+                    ? "bg-brand-gold text-white hover:bg-black"
+                    : "bg-white text-black hover:bg-black hover:text-white"
+                }`}
+              >
+                Get Togo <ArrowRight size={20} />
+              </button>
+            </Link>
 
             <button
               onClick={() => setIsMobileMenuOpen(true)}
