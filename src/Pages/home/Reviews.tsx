@@ -63,7 +63,7 @@ export default function ReviewMarquee() {
               <div className="mb-6 text-brand-gold">
                 <Quote size={32} fill="currentColor" className="opacity-20" />
               </div>
-              
+
               <p className="text-gray-800 text-lg md:text-xl font-medium leading-relaxed italic whitespace-normal mb-8">
                 “{review.text}”
               </p>
@@ -73,7 +73,9 @@ export default function ReviewMarquee() {
                   {review.author}
                 </div>
                 <div>
-                  <p className="text-brand-dark font-bold text-sm">{review.author}</p>
+                  <p className="text-brand-dark font-bold text-sm">
+                    {review.author}
+                  </p>
                   <p className="text-brand-gold text-[10px] uppercase font-black tracking-widest">
                     {review.location}
                   </p>

@@ -61,12 +61,12 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     >
       {/* Header */}
       <div className="flex items-center justify-between px-6 py-6 border-b border-gray-50">
-        <a href="/" onClick={handleClose} className="flex items-center gap-3">
+        <Link to="/" onClick={handleClose} className="flex items-center gap-3">
           <img src="/logo2.webp" alt="Logo" className="w-10 h-10" />
           <span className="font-bold text-xl text-black uppercase tracking-tight">
             Togo
           </span>
-        </a>
+        </Link>
         <button onClick={handleClose} className="p-2 text-black">
           <X size={32} strokeWidth={1.5} />
         </button>
@@ -141,7 +141,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         }`}
       >
         {/* Add onClick={onClose} to the Link so it shuts the menu immediately */}
-        <Link to="/contact" onClick={onClose}>
+        <Link to="/book-a-demo" onClick={onClose}>
           <button className="flex items-center justify-center w-full gap-3 px-6 py-5 bg-brand-gold text-white font-bold text-lg rounded-full shadow-lg active:scale-95 transition-transform">
             Get Togo <ArrowRight size={20} />
           </button>

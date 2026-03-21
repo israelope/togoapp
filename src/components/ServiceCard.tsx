@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 
 interface CardProps {
@@ -9,7 +8,13 @@ interface CardProps {
   index: number;
 }
 
-const ServiceCard = ({ title, description, imageSrc, className, index }: CardProps) => {
+const ServiceCard = ({
+  title,
+  description,
+  imageSrc,
+  className,
+  index,
+}: CardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -33,7 +38,7 @@ const ServiceCard = ({ title, description, imageSrc, className, index }: CardPro
         <h3 className="text-white text-2xl md:text-3xl font-bold italic mb-2 transition-colors group-hover:text-brand-gold">
           {title}
         </h3>
-        
+
         {/* MOBILE: Always visible (max-h-40)
            DESKTOP: Reveal on hover (group-hover:max-h-40)
         */}

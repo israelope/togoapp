@@ -21,10 +21,10 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 z-50 w-full transition-all duration-500 px-6 md:px-10 ${
-  isScrolled
-    ? "bg-white/90 backdrop-blur-md shadow-md py-3 border-b border-gray-100"
-    : "bg-brand-gold py-6 border-b border-black/10 shadow-lg" 
-}`}
+          isScrolled
+            ? "bg-white/90 backdrop-blur-md shadow-md py-3 border-b border-gray-100"
+            : "bg-brand-gold py-6 border-b border-black/10 shadow-lg"
+        }`}
       >
         <div className="container mx-auto flex items-center justify-between">
           {/* Logo Section */}

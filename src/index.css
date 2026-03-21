@@ -2,9 +2,9 @@
 
 @theme {
   /* Defining your custom brand colors */
-  --color-brand-dark: #2D2921;
-  --color-brand-gold: #A6885B;
-  
+  --color-brand-dark: #2d2921;
+  --color-brand-gold: #a6885b;
+
   /* You can also map them to semantic names */
   --color-hospitality-bg: var(--color-brand-dark);
   --color-hospitality-accent: var(--color-brand-gold);
@@ -21,7 +21,11 @@
   --animate-infinite-scroll: infinite-scroll 25s linear infinite;
 
   @keyframes infinite-scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-100%); }
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
   }
 }

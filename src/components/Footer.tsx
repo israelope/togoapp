@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <footer className="bg-brand-dark text-white pt-20 pb-10 px-6 md:px-20 relative overflow-hidden">
       {/* 1. Large Faded Logo "Stamp" in the background */}
-      <div className="absolute right-[-5%] bottom-[-5%] opacity-[0.03] pointer-events-none">
+      <div className="absolute right-[-5%] bottom-[-5%] opacity-[0.03] pointer-events-none ">
         <img
           src="/logo.png"
           alt=""
